@@ -1,0 +1,15 @@
+﻿@using ecommerce.Models
+@model Category
+
+<form asp-action="Store" asp-controller="Categories" asp-area="Admin">
+<div class="form-group d-flex flex-column">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" placeholder="Enter category Name...">
+         <span class="text-danger" asp-validation-for="Name"></span>
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" class="form-control mt-3"  placeholder="Enter category Description...">
+        <span class="text-danger" asp-validation-for="Description"></span>
+
+</div>
+    <button type="submit" class="btn mt-3 btn-outline-success btn-lg">Create</button>
+</form>
