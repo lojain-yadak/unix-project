@@ -18,12 +18,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 
 RUN mkdir -p /app/uploades
-RUN chmod -R 755 /app/uploades
 
 COPY --from=publish /app/publish .
-
-ENV ASPNETCORE_ENVIRONMENT=Production
-
 
 EXPOSE 80
 
