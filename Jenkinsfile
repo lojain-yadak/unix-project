@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'dotnet-jenkins-agent'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
+            args '-v /var/run/docker.sock:/var/run/docker.sock --user root'
         }
     }
     stages {
